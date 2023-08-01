@@ -37,7 +37,7 @@ Select all three (1, 2), (2, 3) and (3, 4) as those are all compatible events an
 
 class Solution:
     def interval_scheduling(self, intervals):
-        intervals.sort()
+        intervals.sort(key=lambda x: x[1])
         event = []
         oldTime = -1.0
         for interval in intervals:
